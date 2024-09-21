@@ -1,3 +1,19 @@
+body{
+    witdh: 960px;
+    max-width: 960px;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:stretch;
+}
+#start{
+    flex-basis: 40px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    font-size: 20px;
+}
+
 #container{
     display: flex;
     flex-direction: column;
@@ -15,10 +31,10 @@
 }
 
 .pixel{
-    width: 10px;
-    height: 10px;
     background-color: #EEE;
     border: black solid 1px;
     margin: 0;
     padding: 0;
+    /*width: 10px;
+    height: 10px;*/
 }
