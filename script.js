@@ -61,7 +61,8 @@ function createPixels (rows, cols){
 
 function paintMe (event){
 
-    event.target.style.backgroundColor = randomColor();
+    event.target.style.backgroundColor = randomColor(); //Extra credit 1
+    darkPixel(event.target);    //Extra credit 2
 } 
 
 
@@ -100,4 +101,19 @@ function randomColor(){
         }
     }
     return colorConstruct;
+}
+
+//Extra credit 2:
+//The argument of this function is a pixel
+function darkPixel (pix){
+    if (isNaN(parseFloat(pix.style.opacity))){
+        pix.style.opacity = 0.1;
+        
+    }else if (parseFloat(pix.style.opacity) < 0.91){
+        pix.style.opacity = parseFloat(pix.style.opacity)+0.1;
+        
+    } else{
+        pix.style.opacity =1;
+        
+    }
 }

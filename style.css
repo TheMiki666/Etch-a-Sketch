@@ -35,6 +35,5 @@ body{
     border: black solid 1px;
     margin: 0;
     padding: 0;
-    /*width: 10px;
-    height: 10px;*/
+    opacity: 0; /*Extra credit 2*/
 }
