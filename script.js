@@ -9,6 +9,7 @@ function main(){
 }
 
 function start(){
+
     let pixPerSide;
     let correct=false;
     do{
@@ -60,11 +61,43 @@ function createPixels (rows, cols){
 
 function paintMe (event){
 
-    event.target.style.backgroundColor ="#000";
+    event.target.style.backgroundColor = randomColor();
 } 
 
 
 function pixelSize(numOfPixels){
     return Math.floor(MAX_SIZE/numOfPixels)-2;  //We substract two pixels for the border
     
+}
+
+//Extra credit 1 - Randomize Color - Returns and hexa format color (ex: #5F90A5)
+function randomColor(){
+    let colorConstruct="#";
+    for (let i=1; i<=6; i++){
+        let dice=Math.floor(Math.random()*16);
+        switch (dice){
+            case 10:
+                colorConstruct=colorConstruct.concat("A");
+            break;
+            case 11:
+                colorConstruct=colorConstruct.concat("B");
+            break;
+            case 12:
+                colorConstruct=colorConstruct.concat("C");
+            break;
+            case 13:
+                colorConstruct=colorConstruct.concat("D");
+            break;
+            case 14:
+                colorConstruct=colorConstruct.concat("E");
+            break;
+            case 15:
+                colorConstruct=colorConstruct.concat("F");
+            break;
+            default:
+                colorConstruct=colorConstruct.concat(dice);
+            break;
+        }
+    }
+    return colorConstruct;
 }
